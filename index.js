@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 
 require("./app/routes/chefs.js")(app);
 require("./app/routes/customer.js")(app);
+require("./app/routes/requirement.js")(app);
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000.");

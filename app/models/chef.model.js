@@ -1,13 +1,12 @@
 const sql = require("./db.js");
 
-// constructor
 const Chef = function(chef){
   this.name = chef.name;
   this.age = chef.age;
   this.gender = chef.gender;
   this.yoe = chef.yoe;
   this.worktiming = chef.worktiming;
-  this.foodpreference = chef.foodpreference;
+  this.food_preference = chef.food_preference;
   this.expertise=chef.expertise;
 };
 

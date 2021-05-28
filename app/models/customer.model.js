@@ -1,15 +1,16 @@
 const sql = require("./db.js");
+const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
-// constructor
+
 const Customer = function(customer) {
   this.name = customer.name;
   this.age = customer.age;
   this.email = customer.email;
   this.gender = customer.gender;
-  this.duration = customer.duration;
-  this.worktiming = customer.worktiming;
-  this.foodpreference = customer.foodpreference;
+  this.password = customer.password;
 };
+
 
 Customer.create = (newCustomer, result) => {
   sql.query("INSERT INTO customers SET ?", newCustomer, (err, res) => {

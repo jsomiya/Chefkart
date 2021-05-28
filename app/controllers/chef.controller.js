@@ -1,6 +1,5 @@
 const Chef = require("../models/chef.model.js");
 
-// Create and Save a new Customer
 exports.create = (req, res) => {
     if(!req.body){
         res.status(400).send({
@@ -13,7 +12,7 @@ exports.create = (req, res) => {
     gender: req.body.gender,
     yoe:req.body.yoe,
     worktiming:req.body.worktiming,
-    foodpreference:req.body.foodpreference,
+    food_preference:req.body.food_preference,
     expertise:req.body.expertise,
     });
 
@@ -28,7 +27,6 @@ exports.create = (req, res) => {
   
 };
 
-// Retrieve all Customers from the database.
 exports.findAll = (req, res) => {
     Chef.getAll((err, data) => {
         if (err)
@@ -40,7 +38,7 @@ exports.findAll = (req, res) => {
       });
 };
 
-// Find a single Customer with a customerId
+
 exports.findOne = (req, res) => {
     Chef.findById(req.params.chefId, (err, data) => {
         if (err) {

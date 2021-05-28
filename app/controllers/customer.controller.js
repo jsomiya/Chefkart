@@ -13,9 +13,7 @@ exports.create = (req, res) => {
         age: req.body.age,
         email: req.body.email,
         gender: req.body.gender,
-        duration: req.body.duration,
-        worktiming: req.body.worktiming,
-        foodpreference:req.body.foodpreference,
+        password: req.body.password,
       });
 
   
