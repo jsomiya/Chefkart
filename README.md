@@ -10,6 +10,7 @@ ratings (given by customers that has been served)
 achievement (worked in resturants, earned certificate, awards, etc.)
 
 I have created three tables.
+
 1. customers
 2. chef
 3. requirement
@@ -17,36 +18,40 @@ I have created three tables.
 requirement table is joined with customer table via id as foreign key so the customers requirements can be added upon filling the requirement submission form.
 
 Schema of customer table:
-id - int, primary key, auto increment
-name - char(50), not null
-age - int, not null
-gender - char(1), not null
-email - varchar(100), not null
-password - varchar(50), not null
+
+id int, primary key, auto increment
+name char(50), not null
+age int, not null
+gender char(1), not null
+email varchar(100), not null
+password varchar(50), not null
 
 Schema of chef table:
-id - int, primary key, auto increment
-name - char(50), not null
-age - int, not null
-gender - char(1), not null
-yoe - varchar(100), not null
-worktiming - varchar(50)
-rating - float,
-achievement - varchar(255),
-food_preference - char(100), not null
-expertise - char(255), not null
+
+id int, primary key, auto increment
+name char(50), not null
+age int, not null
+gender char(1), not null
+yoe varchar(100), not null
+worktiming varchar(50)
+rating float,
+achievement varchar(255),
+food_preference char(100), not null
+expertise char(255), not null
 
 Schema of requirement table:
-id - int, Foreign key of customer
-gender - char(1), not null
-duration - varchar(50), not null
-worktiming - varchar(50)
-food_preference - char(100), not null
-expertise - char(255), not null
+
+id int, Foreign key of customer
+gender char(1), not null
+duration varchar(50), not null
+worktiming varchar(50)
+food_preference char(100), not null
+expertise char(255), not null
 
 port: 3000
 
 routes:
+
 /customers/register/ - Registering a customer
 /getcustomers/:customerId - Get customer by Id
 
