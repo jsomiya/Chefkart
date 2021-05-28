@@ -1,10 +1,10 @@
 module.exports = app => {
     const chef = require("../controllers/chef.controller.js");
 
-    app.post("/chef", chef.create);
+    app.post("/chef/register", chef.create);
 
-    app.get("/chef", chef.findAll);
+    app.get("/getchef/all", chef.findAll);
   
-    app.get("/chef/:chefId", chef.findOne);
+    app.get("/getchef/:chefId", chef.findOne);
   
   };

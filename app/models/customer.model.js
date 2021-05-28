@@ -1,7 +1,4 @@
 const sql = require("./db.js");
-const bcryptjs = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-
 
 const Customer = function(customer) {
   this.name = customer.name;
